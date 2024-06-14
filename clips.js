@@ -34,3 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setInterval(cycleText, 1000)
 })
+
+
+
+hello
