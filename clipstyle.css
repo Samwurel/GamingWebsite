@@ -1,0 +1,283 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(225deg, rgb(255, 70, 85), black);
+    /* rgb(255, 70, 85); */
+    /* rgb(236, 232, 225); */
+}
+ 
+.top-box {
+  position: fixed;
+  display: flex;
+  transition: all 0.1s ease;
+  z-index: 10000;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 0%;
+}
+
+.header-button > a {
+  padding: 0.4rem;
+  color:rgb(236, 232, 225);
+  text-decoration: None;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  padding-right: 4rem;
+}
+
+.bg {
+  background-color: black;
+  transition: all 0.1s ease; 
+}
+
+.outline {
+  outline-width: 0.1rem;
+  outline-style: solid;
+}
+
+.title {
+    color: white;
+    padding: 0.4rem;
+    padding-top: 0.01rem;
+    padding-left: 3rem;
+    font-size: 30px;
+    font-family: "Roboto", sans-serif;
+}
+
+.top-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
+  height: 20rem;
+  padding: 4rem;
+  margin-bottom: 2rem;
+}
+
+.left-text {
+  display: flex;
+  font-family: "Kanit", sans-serif;
+  font-size: 50px;
+  line-height: 50%;
+  display: inline-block;
+  padding: 2rem;
+}
+
+ /* Set the margins to zero to have the text all together and set a desired lineheight to space out divs */
+.left-text p {
+  margin: 0;
+  /* line-height: 4rem; */
+}
+
+.unchanging {
+  margin-bottom: 0.01rem;
+  height: 100%;
+}
+
+.middle-text {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  height: 4rem;
+}
+
+.changing-text {
+  font-family: "Kanit", sans-serif;
+  position: absolute;
+  font-size: 50px;
+  color: rgb(236, 232, 225);
+  /* animation: text-scrolling 2s infinite; */
+  padding-right: 50px;
+  padding-top: 2rem;;
+}
+
+.see-through {
+  opacity: 0%;
+  transition: all 0.1s ease;
+}
+
+.visible {
+  opacity: 100%;
+  transition: all 0.1s ease;
+}
+
+@keyframes text-scrolling {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.video-preview {
+  mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAABaCAYAAAA/xl1SAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEcUlEQVR4nO2aW2/bRhBGD2PKsXNpkATt//+DbZHEji1ZDvOwO+buihJ6eRigPQcYUDQpwg8H33B2NXGGZVmm5nQaLo/nIsFy7nyapvHaqUiNeNNGbX5HZGBpjmN1InYyVfmiXg01NceT74rQi/ejOba1AEtI+CLRIN9VrbmpK3oZFVBGIuVCtmfg2NRzrRcJ5+EBId8M7IDXta7r+a5eH9uySNtmn4GnWgdgX+up3hsSMkOXfq8ogu2A21pvm88hYiuhCJzKdwAeat1T3GrvW5ZloU3AEHCmpN4t8EtT71glnOnfB0Wi9R5Z5bsDvlICCzbeBy8J+JYi3mfgE/CBIuENpqD0jOn3SJHvC8UVWN8Hn+pxAl4SsG3BMyXlIgE/Ab9SRPwAvKnXYygRgXXoOADfKfJd12sh5QN995zGBIwhJN4B31Gk+wz8BnykJONNfZAJKLAm4JEi2j2li0IR8h74xkbnnIcdj1hm2bGmYEj4kZKG71nbsAIKrAJG0oV8e4p47QAbjgGcDCHjJHxNke0NJfneU9ryLQ4istIOINF29xRvbuhXT7p15PYdkObzuB4YIt5Q5IsEVECBVcBY5zvQixcbGWPHnLYWosftuHZXZNccFVCCEBBKCrbSjanXSTgKGGyJeGmPWP7fxB7wuFV7VrzgnIAtl34d4xAiwT/69ZTreJKKAkoqCiipKKCkooCSigJKKgooqSigpKKAkooCSioKKKkooKSigJKKAkoqCiipKKCkooCSigJKKgooqSigpKKAkooCSioKKKkooKSigJKKAkoqCiipKKCkooCSigJKKgooqSigpKKAkooCSioKKKkooKSigJKKAkoqCiipKKCkooCSigJKKgooqSigpKKAkooCSioKKKkooKSigJKKAkoqCiipKKCkooCSigJKKgooqSigpKKAkooCSirzX7hnaY5bJXLJjYuOnBNwfNCP4XMUwPQv/nH5bzB6seXNZmCNAm6J91zrCDw1RygtXAElXGn9OLK6c1bEuXlA+7CFXroD8Fjrut53RAGlEAIegQdWVw70Mo4puMzDQ9rUa8X7DtwDr+u9B2BHkU8BJdx5ovjyjeLLd3oRxzRknqZpWZYlJIoeHvI9AHfAF1b59sANJT0VUGAV6kgR7h74k+LNHcWjkLCdH9hKwEi/Vr5ou3vgTT2/wmUcWYnOeaAk3xfgd3oJIwXXBKxfbtvvkTX9vlJaLfVv3yjpt6MIaAIKnIbXI2t4/UHxKFLwSNOGxwQMAfeUGL2q157q+S0l/WYcQKRnK8DuKPJ9pfizpxfwpAW3AkZ7fWZ9sbzG9JNtxhQMCR8o8j1wTsA6iEA/Acd5jNY7TuVTQAnaNb5wKETc1+om4Wmalq2F6Ofmc0zEM+vQEa1X+WRk3C2LteSoWJh+WQvsJKrLMVGvhpro3/sUUEba/d8f9DJ223TTNC2wIVGzJjht1OZ3RAYu/YCFkA8uyNSIuHWfEso5xh8crLI14r387W89uZdS5Cxbsm3xE/DaqPHKgqjrAAAAAElFTkSuQmCC);
+  mask-size: 100%;
+  mask-position: center;
+}
+
+.jersey-25-charted-regular {
+  font-family: "Jersey 25 Charted", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}  
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.kanit-regular {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.video {
+  outline: 0.1rem black;
+}
+
+.videos1 {
+    /* Flex allows things to be styled without hardcoding (dynamic aspect ratios), pretty much always use flex*/
+    display: flex;
+    /* Spaces divs out between the next layer of indentation */
+    justify-content: space-between;
+    /* changes text color, untagged things inherit this property */
+    color: rgb(236, 232, 225);
+    font-family: "Roboto", sans-serif;  
+    font-weight: 400; 
+    /* Sets a distance between divs within a div */
+    gap: 5%;
+
+    font-size: 25px;
+
+    padding: 0.4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+
+
+.videos2 {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(236, 232, 225);
+    font-family: "Roboto", sans-serif;
+    /* Sets a distance between divs within a div */
+    gap: 5%;
+
+    font-size: 25px;
+
+    padding: 0.4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-top: 7rem;
+}
+
+.grid-item {
+  flex: 1 0 calc(33.333% - 10px);
+  box-sizing: border-box;
+  background-color: grey;
+  border-radius: 20px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 4rem;
+}
+
+.slide-in-left {
+	-webkit-animation: slide-in-left 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-left 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2024-6-3 23:18:7
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-in-left
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+
+  .slide-in-right {
+	-webkit-animation: slide-in-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2024-6-3 23:19:25
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-in-right
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(1000px);
+              transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(1000px);
+              transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  

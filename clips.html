@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="clips.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clips</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25+Charted&display=swap" rel="stylesheet">
+    <link id="style" rel="stylesheet" href="clipstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+
+</head>
+    <body>
+        <div id="header" class="top-box">
+            <div class="title">
+                <p>Valorant Clips</p>
+            </div>
+            <div class="header-button">
+                <a target="_blank" href="fancy.html">Go back</a>
+                <a target="_blank" href="rankcalculate.html">Rank Calculator</a>
+                <a target="_blank" href="info.html">Info</a>
+            </div>
+        </div>
+
+        <div class="grid">
+
+            <div class="top-display">
+                <div class="left-text">
+                    <div class="unchanging">
+                        <p>Scroll down to see</p>
+                    </div>
+                    <div class="middle-text">
+                        <p class="changing-text see-through">Clips</p>
+                        <p class="changing-text see-through">Whiffs</p>
+                        <p class="changing-text see-through">Funny moments</p>
+                    </div>
+                </div>
+
+                <div class="video-preview">
+                    <video width="600rem" height="370rem" autoplay loop muted>
+                        <source src="./jett4k.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <div class="videos1">
+                <div class="video slide-in-left grid-item">
+
+                    <div>
+                        <p id="vid-title">This clips is from Luobin from Ellerslie</p>
+                    </div>
+
+                    <div class="first-row">
+                        <video width="500px" height="300px" id="video1">
+                            <source src="./jett4k.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                </div>
+        
+                <div class="video slide-in-right grid-item">
+                    <div>
+                        <p id="vid-title">This clip is also from Luobin from ellerslie</p>
+                    </div>
+
+                    <div class="first-row">
+                        <video width="500px" height="300px" id="video2">
+                            <source src="./THECLIP.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>    
+    
+        
+            <div class="videos2">
+                <div class="video slide-in-left grid-item">
+                    <p id="vid-title">
+                        This clip is from Kevin Cao 
+                    </p>
+                    <video width="500px" height="300px" id="video3">
+                        <source src="./Valorant_2024.05.17_-_03.02.26.16.DVR.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="video slide-in-right grid-item">
+                    <p id="vid-title">This clip is from a Valorant mod by Shuhei</p>
+                    <video width="500px" height="300px" id="video4">
+                        <source src="./Untitled_video_-_Made_with_Clipchamp.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="funnybutton">
+            <button type="button" onclick="changeTheme()"></button>
+        </div>
+    </body>
+</html> 
