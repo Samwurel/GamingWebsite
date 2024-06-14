@@ -16,25 +16,21 @@ document.addEventListener('DOMContentLoaded', function() {
     function cycleText() {
 
         if (i == 0){
-            change[change.length -1].classList.add("see-through")
-            change[change.length -1].classList.remove("visible")
+            change[change.length -1].classList.add("text-blur-out")
+            change[change.length -1].classList.remove("text-focus-in")
         }
 
-        change[i].classList.add("visible")
-        change[i].classList.remove("see-through")
+        change[i].classList.add("text-focus-in")
+        change[i].classList.remove("text-blur-out")
 
         if (i > 0) {
-            change[i-1].classList.add("see-through")
-            change[i-1].classList.remove("visible")
+            change[i-1].classList.add("text-blur-out")
+            change[i-1].classList.remove("text-focus-in")
         }
         i = (i+1) % change.length
     }
 
     cycleText();
 
-    setInterval(cycleText, 1000)
+    setInterval(cycleText, 2000)
 })
-
-
-
-hello
