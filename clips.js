@@ -1,5 +1,5 @@
 window.addEventListener('scroll', function(){
-    var header = document.getElementById("header");
+    let header = document.getElementById("header");
 
     if(window.scrollY > 0){
         header.classList.add("bg","outline");
@@ -10,8 +10,8 @@ window.addEventListener('scroll', function(){
 })
 
 document.addEventListener('DOMContentLoaded', function() {
-    var change = document.querySelectorAll(".changing-text")
-    var i = 0;
+    let change = document.querySelectorAll(".changing-text")
+    let i = 0;
 
     function cycleText() {
 
@@ -33,4 +33,23 @@ document.addEventListener('DOMContentLoaded', function() {
     cycleText();
 
     setInterval(cycleText, 2000)
+})
+
+// Note the => syntax is another way of defining a function
+document.addEventListener('DOMContentLoaded', () => {
+    
+    var videos = document.querySelectorAll(".videos")
+
+    videos.forEach( videos => {
+        videos.addEventListener("click", () => {
+            if (videos.paused){
+                videos.play()
+            }
+            else{
+                videos.pause()
+            }
+        })
+
+    })
+    
 })
